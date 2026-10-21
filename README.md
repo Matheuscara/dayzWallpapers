@@ -34,7 +34,7 @@ nix run --refresh github:Matheuscara/dayzWallpapers -- --replace
 
 O backup fica em `~/.config/DankMaterialShell/backups/`. Configurações pessoais são
 preservadas. Atualizações de QML podem exigir reiniciar o DMS; o instalador não
-reinicia sua sessão. Se o DMS estiver fechado, abra-o e habilite **Dayz Wallpapers**
+reinicia sua sessão. Se o DMS estiver fechado, abra-o e habilite **Wallpapers**
 em Configurações → Plugins. `--no-enable` instala sem tentar habilitar.
 
 Se Nix reclamar de recursos experimentais, use o prefixo
@@ -47,7 +47,7 @@ Este projeto instala um plugin; a instalação do DMS/compositor é pré-requisi
 dms ipc call dayzWallpapers toggle
 ```
 
-Em Configurações → Plugins → Dayz Wallpapers, escolha sua pasta. Por padrão usa
+Em Configurações → Plugins → Wallpapers, escolha sua pasta. Por padrão usa
 `~/Pictures/Wallpapers`. Cada subpasta vira uma categoria. O download de wallpapers
 não faz parte do instalador; imagens e configurações pessoais não são distribuídas.
 

@@ -94,7 +94,7 @@ PanelWindow {
                     width: parent.width - closeButton.width - Theme.spacingM
                     spacing: Theme.spacingXS
                     StyledText {
-                        text: "Dayz Wallpapers"
+                        text: "Wallpapers"
                         font.pixelSize: Theme.fontSizeXLarge
                         font.weight: Font.Medium
                     }

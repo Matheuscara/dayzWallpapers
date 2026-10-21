@@ -5,6 +5,8 @@ Matheuscara. Código original MIT, sem incorporar o código do Wallpaper Carouse
 O carrossel inclinado é uma referência de interação; este plugin tem implementação
 própria, categorias por pasta e agendamento persistente. Requer Python 3.
 
+Na interface e na lista de plugins, o nome exibido é **Wallpapers**.
+
 ## Usar
 
 Instale a pasta, habilite `dayzWallpapers` e abra:
