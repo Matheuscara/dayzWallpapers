@@ -1,0 +1,24 @@
+{
+  "id": "dayzWallpapers",
+  "name": "Dayz Wallpapers",
+  "description": "Carrossel de imagens locais com categorias por pasta e troca automática configurável",
+  "version": "1.0.0",
+  "author": "Matheuscara",
+  "license": "MIT",
+  "type": "daemon",
+  "capabilities": [
+    "wallpaper"
+  ],
+  "component": "./DayzWallpapers.qml",
+  "settings": "./WallpaperSettings.qml",
+  "icon": "wallpaper",
+  "requires_dms": ">=1.4.6",
+  "requires": [
+    "python3"
+  ],
+  "permissions": [
+    "settings_read",
+    "settings_write"
+  ],
+  "homepage": "https://github.com/Matheuscara/dayzWallpapers"
+}

@@ -1,0 +1,28 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python3 -m unittest discover -s tests -v
+  nix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - run: nix flake check
+      - run: nix build .#plugin .#default
+      - name: Install in isolated user directories
+        run: |
+          export XDG_CONFIG_HOME="$RUNNER_TEMP/dayz-config"
+          export XDG_STATE_HOME="$RUNNER_TEMP/dayz-state"
+          nix run . -- --no-enable
+          test -f "$XDG_CONFIG_HOME/DankMaterialShell/plugins/DayzWallpapers/plugin.json"
+          test -L "$XDG_STATE_HOME/dayzWallpapers/current"
+          nix run . -- --no-enable
